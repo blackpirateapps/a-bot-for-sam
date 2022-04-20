@@ -2413,7 +2413,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
 			case 'anime': case 'bhai': case 'dick': case 'sex': {
-           const devsound = fs.readFileSync('./DarkMedia/ihaveadick.mp3') //u can change the music in DarkMedia folder
+           const devsound = fs.readFileSync('./DarkMedia/ihaveadick.m4a') //u can change the music in DarkMedia folder
            DarkBotInc.sendMessage(m.chat, { audio: devsound, mimetype: 'audio/mp4', ptt: true, quoted: m })
             }
             break
