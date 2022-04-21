@@ -2418,7 +2418,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
 			case 'maybe': case 'sambot': case 'what': case 'should': {
-           const devsound = fs.readFileSync('./DarkMedia/maybe.mp3') //u can change the music in DarkMedia folder
+           const devsound = fs.readFileSync('./DarkMedia/maybe.m4a') //u can change the music in DarkMedia folder
            DarkBotInc.sendMessage(m.chat, { audio: devsound, mimetype: 'audio/mp4', ptt: true, quoted: m })
             }
             break
