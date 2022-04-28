@@ -1609,12 +1609,20 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
                 DarkBotInc.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
             }
             break
-            case 'anime': case 'waifu': {
-                replay(mess.wait)
-                let anu = await fetchJson('https://api.waifu.pics/sfw/waifu')
-                DarkBotInc.sendImage(m.chat, anu.result.img, `⭔ Title : waifu`, m)
-                
-            }
+           case 'anime': case 'waifu': case 'husbu': case 'neko': case 'shinobu': case 'megumin': {
+                let buttons = [
+                    {buttonId: `anime`, buttonText: {displayText: '➡️Next Image➡️'}, type: 1}
+                ]
+				let buttonMessage = {
+                    image: { url: 'https://pic.re/image' },
+                    caption: `Waifu`,
+                    footer: DarkBotInc.user.name,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                DarkBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+}
+            break
 			break
 			case 'yuri': case 'lesbian': case 'girlsx': case 'nekosex': {
                 let buttons = [
