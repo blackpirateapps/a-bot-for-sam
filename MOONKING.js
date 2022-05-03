@@ -748,6 +748,34 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
                 }
             }
             break
+			case 'gaytag': {
+            if (!m.isGroup) throw mess.group
+            let member = participants.map(u => u.id)
+            let jodoh = member[Math.floor(Math.random() * member.length)]
+            let jawab = `Gay 👉🏻
+
+         @${jodoh.split('@')[0]}`
+            let ments = [jodoh]
+            let buttons = [
+                        { buttonId: 'L', buttonText: { displayText: 'ratio' }, type: 1 }
+                    ]
+                    await DarkBotInc.sendButtonText(m.chat, buttons, jawab, DarkBotInc.user.name, m, {mentions: ments})
+            }
+            break
+		case 'madarchod': {
+            if (!m.isGroup) throw mess.group
+            let member = participants.map(u => u.id)
+            let jodoh = member[Math.floor(Math.random() * member.length)]
+            let jawab = `madarchod 👉🏻
+
+         @${jodoh.split('@')[0]}`
+            let ments = [jodoh]
+            let buttons = [
+                        { buttonId: 'tru', buttonText: { displayText: 'tru' }, type: 1 }
+                    ]
+                    await DarkBotInc.sendButtonText(m.chat, buttons, jawab, DarkBotInc.user.name, m, {mentions: ments})
+            }
+            break	
             case 'mysoulmate': {
             if (!m.isGroup) throw mess.group
             let member = participants.map(u => u.id)
